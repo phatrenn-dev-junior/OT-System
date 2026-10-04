@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Map Telegram's theme variables (set by the WebApp SDK) to Tailwind colors,
+   with sensible fallbacks for testing in a normal browser. */
+@theme inline {
+  --color-tg-bg: var(--tg-theme-bg-color, #ffffff);
+  --color-tg-secondary: var(--tg-theme-secondary-bg-color, #f1f5f9);
+  --color-tg-text: var(--tg-theme-text-color, #0f172a);
+  --color-tg-hint: var(--tg-theme-hint-color, #64748b);
+  --color-tg-link: var(--tg-theme-link-color, #2481cc);
+  --color-tg-button: var(--tg-theme-button-color, #2481cc);
+  --color-tg-button-text: var(--tg-theme-button-text-color, #ffffff);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-tg-secondary);
+  color: var(--color-tg-text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
